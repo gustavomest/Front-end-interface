@@ -1,0 +1,272 @@
+{
+  "licence": {
+    "token": "",
+    "domain": "asafsad"
+  },
+  "cronometer": {
+    "active": false
+  },
+  "scheduler": {
+    "interval": 30,
+    "expireAfter": 36
+  },
+  "barcode": {
+    "size": 13,
+    "expirationTime": 1
+  },
+  "database": {
+    "host": "0.0.0.0",
+    "port": 1234,
+    "connected": false
+  },
+  "logging": {
+    "message": true,
+    "sql": false,
+    "console": false
+  },
+  "connector": {
+    "serial": {
+      "enable": true,
+      "ports": [
+        {
+          "port": "/dev/usb3",
+          "baudrate": 9600,
+          "timeout": 1000,
+          "driver": "ftdi"
+        }
+      ]
+    },
+    "ethernet": {
+      "enable": true,
+      "port": "5150"
+    }
+  },
+  "analyzerNew": {
+    "ABL835": {
+      "fabricante": "Radiometer",
+      "modelo": "ABL835",
+      "enable": true,
+      "address": "172.16.28.136",
+      "tests": {
+        "Cl-": {
+          "name": "Cl-",
+          "enable": true,
+          "cod": 0
+        },
+        "Ca++": {
+          "name": "Ca++",
+          "enable": true,
+          "cod": 0
+        },
+        "K+": {
+          "name": "K+",
+          "enable": true,
+          "cod": 0
+        },
+        "Na+": {
+          "name": "Na+",
+          "enable": true,
+          "cod": 0
+        },
+        "Lac": {
+          "name": "Lac",
+          "enable": true,
+          "cod": 0
+        }
+      }
+    },
+    "AQT90Flex": {
+      "fabricante": "Radiometer",
+      "modelo": "AQT90Flex",
+      "enable": true,
+      "tests": {
+        "NT-proBNP": {
+          "name": "NT-proBNP",
+          "enable": true,
+          "cod": 1816
+        },
+        "beta-hCG": {
+          "name": "beta-hCG",
+          "enable": true,
+          "cod": 73
+        },
+        "D-Dimer": {
+          "name": "D-Dimer",
+          "enable": true,
+          "cod": 1818
+        },
+        "TnI": {
+          "name": "TnI",
+          "enable": true,
+          "cod": 1815
+        },
+        "PCT": {
+          "name": "PCT",
+          "enable": true,
+          "cod": 1817
+        }
+      }
+    },
+    "VITROS": {
+      "fabricante": "Ortho",
+      "modelo": "VITROS",
+      "enable": false,
+      "tests": {
+        "B12": {
+          "name": "B12",
+          "enable": false,
+          "cod": 19
+        }
+      },
+      "analytesCodes": {
+        "174": 1997,
+        "001": 1785,
+        "002": 1994,
+        "003": 1786,
+        "004": 1992,
+        "005": 1781,
+        "008": 1764,
+        "009": 1768,
+        "010": 1766,
+        "011": 1999,
+        "012": 1776,
+        "014": 1782,
+        "015": 1746,
+        "017": 2037,
+        "018": 793,
+        "023": 1799,
+        "025": 2036,
+        "026": 1796,
+        "027": 1802,
+        "028": 1801,
+        "032": 1751,
+        "037": 1995,
+        "063": 1790,
+        "062": 1789,
+        "070": 1778,
+        "074": 1784,
+        "075": 1779
+      }
+    }
+  },
+  "analyzer": {
+    "mindrayBC5380": {
+      "enable": true,
+      "edta": {
+        "enable": true,
+        "name": null,
+        "cod": 116
+      },
+      "citrato": {
+        "enable": true,
+        "name": null,
+        "cod": 2388
+      }
+    },
+    "destinyPlus": {
+      "enable": true,
+      "expirationTime": 24,
+      "exams": null,
+      "tpm": {
+        "enable": true,
+        "name": "TPM",
+        "cod": 216
+      },
+      "atm": {
+        "enable": false,
+        "name": "ATM",
+        "cod": 242
+      },
+      "inrm": {
+        "enable": true,
+        "name": "INRM",
+        "cod": 217
+      },
+      "ratio": {
+        "enable": true,
+        "name": "RATIO",
+        "cod": 241
+      },
+      "ttpao": {
+        "enable": true,
+        "name": "TTPAO",
+        "cod": 218
+      },
+      "fib": {
+        "enable": false,
+        "name": "FIB-M",
+        "cod": 157
+      }
+    },
+    "humanClot": {
+      "enable": true,
+      "expirationTime": 24,
+      "exams": null,
+      "tpm": {
+        "enable": true,
+        "name": "PT-li",
+        "cod": 216
+      },
+      "atm": {
+        "enable": false,
+        "name": "ATM",
+        "cod": 242
+      },
+      "inrm": {
+        "enable": true,
+        "name": "INR",
+        "cod": 217
+      },
+      "ratio": {
+        "enable": false,
+        "name": "RATIO",
+        "cod": 0
+      },
+      "ttpao": {
+        "enable": true,
+        "name": "aPTT",
+        "cod": 218
+      },
+      "fib": {
+        "enable": true,
+        "name": "Fib",
+        "cod": 157
+      },
+      "ddimer": {
+        "enable": true,
+        "name": "D-Di",
+        "cod": 0
+      }
+    },
+    "urised2Mini": {
+      "enable": false,
+      "sedimento": {
+        "enable": true,
+        "name": "Sedimento Urinario",
+        "cod": 0
+      }
+    }
+  },
+  "bancada": {
+    "hematologia": {
+      "name": "Hematologia",
+      "cod": 2,
+      "enable": true
+    },
+    "bioquimica": {
+      "name": "Bioquimica",
+      "cod": 1,
+      "enable": true
+    },
+    "hemostasia": {
+      "name": "Hemostasia",
+      "cod": 12,
+      "enable": true
+    },
+    "urologia": {
+      "name": "Urologia",
+      "cod": 5,
+      "enable": false
+    }
+  }
+}
