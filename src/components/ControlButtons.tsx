@@ -1,12 +1,18 @@
 type Props = {
-  onStatusChange: (newStatus: string) => void; // Aceita um argumento do tipo string
+  onStatusChange: (newStatus: string) => void;
+  serviceName: string;
 };
 
-export default function ControlButtons({ onStatusChange }: Props) {
+export default function ControlButtons({ onStatusChange, serviceName }: Props) {
   const handleAction = async (action: "start" | "stop") => {
-    await fetch(`http://localhost:3000/servico/${action}`, { method: "POST" });
+    const response = await fetch(`/api/service/${serviceName}`, {
+      method: "PUT",
+      body: JSON.stringify({ action }),
+    });
 
-    onStatusChange(action === "start" ? "Ativo" : "Inativo");
+    if (response.ok) {
+      onStatusChange(action === "start" ? "Ativo" : "Inativo");
+    }
   };
 
   return (
